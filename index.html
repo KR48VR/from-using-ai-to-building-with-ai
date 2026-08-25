@@ -183,6 +183,13 @@ h1 .hot{color:var(--red)}
   text-transform:uppercase;color:var(--on-band-2);
 }
 .band-head .r.hot{color:var(--red)}
+.band-head .rlink{
+  font-family:var(--f-display);font-weight:700;font-size:13px;letter-spacing:.055em;
+  color:var(--red);text-decoration:none;border-bottom:1px solid transparent;
+  transition:border-color 130ms ease;white-space:nowrap;
+}
+.band-head .rlink:hover,.band-head .rlink:focus-visible{border-bottom-color:var(--red)}
+.band-head .rgroup{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
 
 /* ── pipeline ── */
 .stages{
@@ -391,7 +398,11 @@ h1 .hot{color:var(--red)}
   <div class="shell">
     <div class="band-head">
       <span class="t" id="pipeline-h">We build AI capability across the learning lifecycle</span>
-      <span class="r hot">One pipeline, eight stages</span>
+      <span class="rgroup">
+        <span class="r">Read &amp; download</span>
+        <a class="rlink" href="https://bit.ly/SUTDAIED" target="_blank"
+           rel="noopener noreferrer">bit.ly/SUTDAIED</a>
+      </span>
     </div>
     <ol class="stages">
       <li class="stage" style="animation-delay:80ms"><span class="n">01</span><span class="lbl">Primary</span></li>
@@ -706,8 +717,8 @@ h1 .hot{color:var(--red)}
         <p class="takeaway"><span class="lead">Takeaway</span>Teachers should be able to build useful AI tools without giving up control over educational purpose, evidence, or learner data.</p>
       </article>
 
-      <article class="card" data-pillar="c3" data-aud="undergrad">
-        <div class="tags"><span class="badge b3">C3 · Collaboration</span><span class="badge-out">Undergraduates</span></div>
+      <article class="card" data-pillar="c3" data-aud="undergrad educator">
+        <div class="tags"><span class="badge b3">C3 · Collaboration</span><span class="badge-out">Undergraduates</span><span class="badge-out">Educators</span></div>
         <h3>Human and AI Judgement in the Same Loop: Critique, Tutoring, and Oral Assessment</h3>
         <p class="scope">Critsly · Archie Math · CALLIOPE · working and pilot prototypes</p>
         <p class="body">Critsly makes AI and peer critique <b>artefact-aware</b> by tying feedback to learners' actual boards and images, then structuring reflection, action plans and educator analytics. Archie Math is a conversational, Socratic mathematics tutor with voice, multilingual and stylus support; it gives progressive hints rather than prematurely revealing answers. CALLIOPE is a source-grounded spoken-assessment system that shows educators the transcript and six AI-drafted evaluation dimensions for adjustment and approval; AI scores are not the sole basis for consequential grading. Archie Math and CALLIOPE are being co-designed with SUTD students.</p>
@@ -821,7 +832,7 @@ h1 .hot{color:var(--red)}
 })();
 </script>
 <script>
-// Upgrade the data: URI to a blob URL — more reliable for large files in some browsers.
+// Upgrade the data: URI to a blob URL - more reliable for large files in some browsers.
 (function(){
   var a = document.getElementById("dl-btn");
   if (!a || !a.href.indexOf) return;
